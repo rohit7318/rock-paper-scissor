@@ -1,0 +1,298 @@
+:root
+{
+    /* background colors */
+
+    --body-bg-color:#222831;
+    --header-bg-color:#111720;
+    --button-bg-color:#4A4F57;
+    --pop-up-background-color:#4A4F57;
+
+    /* Text Colors */
+    --header-text-color:yellow;
+    --pop-up-button-text-color:white;
+
+    /* Font Sizes */
+    --button-font-size:6rem;
+    --header-font-size:5vmax;
+    --winn-loss-font-size:2rem;
+    --result-image-font-size:5rem;
+    --pop-up-button-font-size:1.2rem;
+    --winn-loss-slogan-font-size:1.3rem;
+    --text-player-score-font-size:1.5rem;
+
+    /* Widths */
+    --ui-container-max-width:700px;
+    --place-holder-image-width:40%;
+    --ui-top-max-width:550px;
+    --ui-top-min-width:450px;
+    --ui-bottom-width:80%;
+
+    /* Heights */
+    --header-height:15vh;
+
+    /* Paddings */
+    --pop-up-padding:3vw;
+    --pop-up-button-padding:1rem;
+    --pop-up-button-margin-top:1rem;
+    --main-padding-top:1.5rem;
+    --ui-container-padding:4vh 0 0 0;
+
+
+    /* Border Radius */
+    --primary-border-radius:5px;
+    --border-radius-placeholder-image:10px;
+    --border-radius-image-container:10px;
+
+    /* row-gaps */
+    --ui-container-row-gap:2rem;
+
+    /* Column gaps */
+    --ui-bottom-column-gap:3rem;
+
+    /* margin-bottoms */
+    --margin-bottom:1rem;
+    --mini-margin-bottom:.5rem;
+
+
+}
+
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,body
+{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--body-bg-color);
+}
+
+header 
+{
+    background-color: var(--header-bg-color);
+    height: var(--header-height);
+    width: 100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow: -10px 30px 25px rgb(0, 0, 0);
+    
+}
+
+header h1 
+{
+    color: var(--header-text-color);
+    font-family: sans-serif;
+    font-size: var(--header-font-size);
+    filter: drop-shadow(0px 0px 30px red);
+}
+
+main
+{
+    height: calc(100vh - 15vh);
+    background-color: inherit;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+    padding-top: var(--main-padding-top);
+
+}
+
+
+
+#winOrLoss 
+{
+    font-size: var(--winn-loss-font-size);
+    margin-bottom: var(--margin-bottom);
+}
+#winLossSlogan
+{
+    font-size: var(--winn-loss-slogan-font-size);  
+    margin-bottom: var(--margin-bottom);
+}
+
+.ui-container
+{
+
+    max-width: var(--ui-container-max-width);
+    margin: 0 auto;
+    /* padding: 4vh 0 0 0; */
+    padding: var(--ui-container-padding);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    row-gap: var(--ui-container-row-gap);
+
+}
+
+.ui-top 
+{
+    display: flex;
+    justify-content: space-around;
+    min-width: var(--ui-top-min-width);
+    max-width: var(--ui-top-max-width);
+}
+
+.ui-top-left , .ui-top-right 
+{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+}
+
+.ui-top .image-container
+{
+    width: fit-content;
+    margin-bottom: var(--mini-margin-bottom);
+    border-radius: var(--border-radius-image-container);
+    font-size: var(--result-image-font-size);
+    
+}
+
+
+
+.ui-top .image-container.hidden
+{
+    display: none;
+}
+
+
+.ui-top .placeholderImage
+{
+    width: var(--place-holder-image-width);
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: var(--mini-margin-bottom);
+    /* border-radius: 10px; */
+    border-radius: var(--border-radius-placeholder-image);
+
+}
+
+.hidden 
+{
+    display: none;
+}
+
+.ui-top .placeholderImage.hidden
+{
+    display: none;
+}
+.ui-top .textPlayerScore 
+{
+    font-size: var(--text-player-score-font-size);
+}
+
+.ui-bottom
+{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width: var(--ui-bottom-width);
+    /* column-gap: 3rem; */
+    column-gap: var(--ui-bottom-column-gap);
+
+}
+
+.ui-bottom .button 
+{
+    flex:1;
+    aspect-ratio: 1/1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius: 50%;
+    font-size: var(--button-font-size);
+    transition: transform 0.1s ease-in-out;
+    background-color: var(--button-bg-color);
+
+    border: 2px solid white;
+}
+
+
+
+.ui-bottom .button:hover
+{
+    cursor: pointer;
+}
+
+.ui-bottom .button:active
+{
+    transform: scale(1.1);
+}
+
+
+
+#pop-up 
+{
+
+    padding: var(--pop-up-padding);
+
+    background-color: var(--pop-up-background-color);
+
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color: var(--pop-up-button-text-color);
+    border-radius: var(--primary-border-radius);
+    font-family: sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;  
+}
+#pop-up.hidden
+{
+    display: none;
+}
+
+#pop-up button 
+{
+    margin-top: var(--pop-up-button-margin-top);
+    cursor: pointer;
+    background-color: rgb(0, 0, 0);
+    color: var(--pop-up-button-text-color);
+    font-size: var(--pop-up-button-font-size);
+    border: 1px solid white;
+    border-radius: var(--primary-border-radius);
+    transition: all 0.1s ease-in-out;
+    padding: var(--pop-up-button-padding);
+}
+
+#pop-up button:active
+{
+    transform: scale(1.04);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.blur 
+{
+    filter: blur(5px);
+}
+
+
+
+
+
+
+.unselectable {
+    user-select: none; /* Standard syntax */
+    -moz-user-select: none; /* Firefox */
+    -webkit-user-select: none; /* Safari and Chrome */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+/* For div elements */
+.div-unselectable {
+    user-select: none; /* Standard syntax */
+    -moz-user-select: none; /* Firefox */
+    -webkit-user-select: none; /* Safari and Chrome */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}

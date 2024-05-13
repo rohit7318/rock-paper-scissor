@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <h1>Rock Paper Scissors...</h1>
+    </header>
+    <main class="" id="main">
+        <h3 id="winOrLoss">Choose your weapon
+        </h3>
+        <h4 id="winLossSlogan">First to score 5 points wins the game</h4>
+        <div class="ui-container">
+            <div class="ui-top">
+
+                <div class="ui-top-left">
+                    <div class="image-container playerImage hidden" id="playerImage">✊</div>
+                    <img src="questionMark.jpg" alt="Image Logo" class="placeholderImage">
+                    <h4 class="textPlayerScore">Player : <span id="playerScore"></span> </h4>
+                </div>
+
+                <div class="ui-top-right">
+                    <div class="image-container computerImage hidden" id="computerImage">✊</div>
+                    <img src="questionMark.jpg" alt="Image Logo" class="placeholderImage">
+                    <h4 class="textPlayerScore">Computer : <span id="computerScore"></span></h4>
+                </div>
+
+            </div>
+
+            <div class="ui-bottom div-unselectable">
+                <button class="button div-unselectable" id="Rock">✊</button>
+                <button class="button div-unselectable" id="Scissor">✌</button>
+                <button class="button div-unselectable" id="Paper">✋</button>
+            </div>
+        </div>
+    </main>
+
+    <div id="pop-up" class="hidden">
+        <h1>You Win....</h1>
+        <button id="restartBtn">Restart Game</button>
+    </div>
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
